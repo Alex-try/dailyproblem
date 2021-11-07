@@ -1,0 +1,31 @@
+1.查询DNS解析地址
+这里我们用站长工具DNS查询 选择TTL值最小的ip：52.69.186.44
+
+
+2.告诉本机新地址
+
+映射文件存放于: C:\Windows\System32\drivers\etc\hosts
+使用记事本打开hosts文件，添加如下代码：
+
+#github related website
+52.69.186.44 github.com
+151.101.185.194 github.global.ssl.fastly.net
+203.98.7.65 gist.github.com
+13.229.189.0 codeload.github.com
+185.199.109.153 desktop.github.com
+185.199.108.153 guides.github.com
+185.199.108.153 blog.github.com
+18.204.240.114 status.github.com
+185.199.108.153 developer.github.com
+185.199.108.153 services.github.com
+192.30.253.175 enterprise.github.com
+34.195.49.195 education.github.com
+185.199.108.153 pages.github.com
+34.196.237.103 classroom.github.com
+
+3.测试最终效果
+修改完映射文件后，打开cmd输入ipconfig/flushdns刷新dns缓存。
+
+直接ping官网github.com能得到低至59ms的延迟，可以看出来这效果非常不错了。
+
+本文为转载
